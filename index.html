@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShopEase - Your Online Store</title>
+  <link rel="stylesheet" href="style.css"> <!-- Link to external CSS file -->
+  <script src="script.js" defer></script> <!-- Link to the external JS file -->
+</head>
+<body>
+  <!-- Navbar with smooth scrolling links -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="images/original.png" alt="ShopEase Logo">
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#" onclick="scrollToSection('home')">Home</a></li>
+        <li><a href="#" onclick="scrollToSection('products')">Products</a></li>
+        <li><a href="#" onclick="scrollToSection('about')">About Us</a></li>
+        <li><a href="#" onclick="scrollToSection('contact')">Contact</a></li>
+      </ul>
+    </nav>
+    <!-- Cart Button with cart-btn class -->
+    <button class="cart-btn" onclick="showCart()">View Cart (0)</button> <!-- Cart Button -->
+  </header>
+
+  <!-- Home Section -->
+  <section id="home" class="hero-section">
+    <h2>Welcome to ShopEase</h2>
+    <p>Your one-stop shop for quality products!</p>
+    <button onclick="scrollToSection('products')" class="shop-now-btn">Shop Now</button>
+  </section>
+
+  <!-- Product Section -->
+  <section id="products" class="products-section">
+    <h2>Our Featured Products</h2>
+    <div class="products-grid">
+      <!-- Product Cards with cart-btn class for Add to Cart button -->
+      <div class="product-card">
+        <img src="images/placeholder1.png" alt="Product 1" class="product-image">
+        <h3>Wireless Earbuds</h3>
+        <p>$49.99</p>
+        <button class="cart-btn" onclick="addToCart('Wireless Earbuds')">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="images/placeholder2.png" alt="Product 2" class="product-image">
+        <h3>Smartwatch</h3>
+        <p>$79.99</p>
+        <button class="cart-btn" onclick="addToCart('Smartwatch')">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="images/placeholder3.png" alt="Product 3" class="product-image">
+        <h3>Gaming Mouse</h3>
+        <p>$29.99</p>
+        <button class="cart-btn" onclick="addToCart('Gaming Mouse')">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="images/placeholder4.png" alt="Product 4" class="product-image">
+        <h3>Bluetooth Speaker</h3>
+        <p>$39.99</p>
+        <button class="cart-btn" onclick="addToCart('Bluetooth Speaker')">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="images/placeholder5.png" alt="Product 5" class="product-image">
+        <h3>Portable Charger</h3>
+        <p>$19.99</p>
+        <button class="cart-btn" onclick="addToCart('Portable Charger')">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="images/placeholder6.png" alt="Product 6" class="product-image">
+        <h3>Laptop Sleeve</h3>
+        <p>$25.99</p>
+        <button class="cart-btn" onclick="addToCart('Laptop Sleeve')">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="images/placeholder7.png" alt="Product 7" class="product-image">
+        <h3>Noise Cancelling Headphones</h3>
+        <p>$129.99</p>
+        <button class="cart-btn" onclick="addToCart('Noise Cancelling Headphones')">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="images/placeholder8.png" alt="Product 8" class="product-image">
+        <h3>Smartphone Stand</h3>
+        <p>$12.99</p>
+        <button class="cart-btn" onclick="addToCart('Smartphone Stand')">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="images/placeholder9.png" alt="Product 9" class="product-image">
+        <h3>Wireless Keyboard</h3>
+        <p>$39.99</p>
+        <button class="cart-btn" onclick="addToCart('Wireless Keyboard')">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Us Section -->
+  <section id="about" class="about-section">
+    <h2>About Us</h2>
+    <p>ShopEase is dedicated to bringing you quality products at the best prices.</p>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
+    <h2>Contact Us</h2>
+    <p>Email: support@shopease.com</p>
+    <p>Phone: +1-800-123-4567</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2024 ShopEase. All rights reserved.</p>
+  </footer>
+
+  <!-- Cart Section (Initially hidden) -->
+  <div id="cart-section" style="display:none;">
+    <h2>Your Cart</h2>
+    <ul id="cart-items"></ul>
+    <button onclick="clearCart()">Clear Cart</button>
+  </div>
+
+  <!-- Cart Page Section (Initially hidden) -->
+  <section id="cart-page-section" style="display:none;">
+    <h2>Your Cart</h2>
+    <div id="cart-items-list"></div>
+    <button onclick="clearCart()">Clear Cart</button>
+  </section>
+
+  <script src="script.js"></script> <!-- Link to external JS file -->
+</body>
+</html>
